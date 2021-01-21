@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ui_serial_bkpWVfVEc.ui'
+## Form generated from reading UI file 'ui_serialtBQouX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -11,7 +11,6 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -30,8 +29,8 @@ class Ui_MainWindow(object):
         self.drop_shadow_layout.setContentsMargins(10, 10, 10, 10)
         self.drop_shadow_frame = QFrame(self.centralwidget)
         self.drop_shadow_frame.setObjectName(u"drop_shadow_frame")
-        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 29, 48, 255), stop:1 rgba(0, 72, 116, 255));\n"
-"border-radius:10px;")
+        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(42, 44, 111, 255), stop:0.583916 rgba(28, 29, 73, 255));\n"
+"border-radius:15px;")
         self.drop_shadow_frame.setFrameShape(QFrame.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout = QVBoxLayout(self.drop_shadow_frame)
@@ -40,7 +39,10 @@ class Ui_MainWindow(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.title_bar = QFrame(self.drop_shadow_frame)
         self.title_bar.setObjectName(u"title_bar")
-        self.title_bar.setMaximumSize(QSize(16777215, 40))
+        self.title_bar.setMaximumSize(QSize(16777215, 45))
+        font = QFont()
+        font.setStyleStrategy(QFont.PreferAntialias)
+        self.title_bar.setFont(font)
         self.title_bar.setStyleSheet(u"background-color:none")
         self.title_bar.setFrameShape(QFrame.NoFrame)
         self.title_bar.setFrameShadow(QFrame.Raised)
@@ -52,19 +54,28 @@ class Ui_MainWindow(object):
         self.frame_title.setObjectName(u"frame_title")
         self.frame_title.setFrameShape(QFrame.StyledPanel)
         self.frame_title.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_2 = QHBoxLayout(self.frame_title)
-        self.horizontalLayout_2.setSpacing(0)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(15, 0, 0, 0)
+        self.verticalLayout_5 = QVBoxLayout(self.frame_title)
+        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(12, 0, 0, 0)
         self.label_title = QLabel(self.frame_title)
         self.label_title.setObjectName(u"label_title")
-        font = QFont()
-        font.setFamily(u"Roboto Condensed")
-        font.setPointSize(12)
-        self.label_title.setFont(font)
+        font1 = QFont()
+        font1.setFamily(u"Roboto Condensed")
+        font1.setPointSize(12)
+        font1.setStyleStrategy(QFont.PreferAntialias)
+        self.label_title.setFont(font1)
         self.label_title.setStyleSheet(u"color:rgb(60, 231, 195)")
 
-        self.horizontalLayout_2.addWidget(self.label_title)
+        self.verticalLayout_5.addWidget(self.label_title)
+
+        self.line = QFrame(self.frame_title)
+        self.line.setObjectName(u"line")
+        self.line.setStyleSheet(u"border: 1px solid grey;")
+        self.line.setFrameShape(QFrame.HLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_5.addWidget(self.line)
 
 
         self.horizontalLayout.addWidget(self.frame_title)
@@ -133,56 +144,162 @@ class Ui_MainWindow(object):
 
         self.content_bar = QFrame(self.drop_shadow_frame)
         self.content_bar.setObjectName(u"content_bar")
-        self.content_bar.setStyleSheet(u"background-color:none")
+        self.content_bar.setStyleSheet(u"")
         self.content_bar.setFrameShape(QFrame.StyledPanel)
         self.content_bar.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.content_bar)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.line = QFrame(self.content_bar)
-        self.line.setObjectName(u"line")
-        self.line.setStyleSheet(u"border: 1px solid grey;")
-        self.line.setFrameShape(QFrame.HLine)
-        self.line.setFrameShadow(QFrame.Sunken)
-
-        self.verticalLayout_3.addWidget(self.line)
-
         self.group_serial_settings = QGroupBox(self.content_bar)
         self.group_serial_settings.setObjectName(u"group_serial_settings")
-        font1 = QFont()
-        font1.setFamily(u"Lucida Console")
-        font1.setPointSize(7)
-        font1.setBold(False)
-        font1.setWeight(50)
-        font1.setStyleStrategy(QFont.PreferAntialias)
-        self.group_serial_settings.setFont(font1)
-        self.group_serial_settings.setStyleSheet(u"border: 1px solid rgb(85, 150, 127); ; color: rgb(255, 170, 255);\n"
-"border-radius:5px;\n"
+        self.group_serial_settings.setMaximumSize(QSize(16777215, 125))
+        font2 = QFont()
+        font2.setFamily(u"Lucida Console")
+        font2.setPointSize(7)
+        font2.setBold(False)
+        font2.setWeight(50)
+        font2.setStyleStrategy(QFont.PreferAntialias)
+        self.group_serial_settings.setFont(font2)
+        self.group_serial_settings.setStyleSheet(u"border: 2px solid rgb(85, 150, 127);\n"
+"color: rgb(255, 170, 255);\n"
+"border-radius:12px;\n"
+"background-color: none;\n"
 "")
         self.group_serial_settings.setAlignment(Qt.AlignRight|Qt.AlignTop|Qt.AlignTrailing)
-        self.com_port = QLabel(self.group_serial_settings)
-        self.com_port.setObjectName(u"com_port")
-        self.com_port.setGeometry(QRect(70, 60, 121, 16))
-        self.com_port.setStyleSheet(u"border: none")
-        self.baud_rate = QLabel(self.group_serial_settings)
-        self.baud_rate.setObjectName(u"baud_rate")
-        self.baud_rate.setGeometry(QRect(470, 60, 131, 16))
-        self.baud_rate.setStyleSheet(u"border: none")
-        self.comboBox = QComboBox(self.group_serial_settings)
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setGeometry(QRect(200, 60, 101, 22))
-        self.comboBox_2 = QComboBox(self.group_serial_settings)
-        self.comboBox_2.setObjectName(u"comboBox_2")
-        self.comboBox_2.setGeometry(QRect(590, 60, 101, 22))
+        self.verticalLayout_4 = QVBoxLayout(self.group_serial_settings)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(20, 20, 20, 20)
+        self.frame_for_settings = QFrame(self.group_serial_settings)
+        self.frame_for_settings.setObjectName(u"frame_for_settings")
+        self.frame_for_settings.setMaximumSize(QSize(16777215, 500))
+        self.frame_for_settings.setStyleSheet(u"border:none; border-radius: 20px;background-color: none")
+        self.frame_for_settings.setFrameShape(QFrame.StyledPanel)
+        self.frame_for_settings.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.frame_for_settings)
+        self.horizontalLayout_2.setSpacing(7)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.frame_com = QFrame(self.frame_for_settings)
+        self.frame_com.setObjectName(u"frame_com")
+        self.frame_com.setStyleSheet(u"background-color:none")
+        self.frame_com.setFrameShape(QFrame.StyledPanel)
+        self.frame_com.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_com)
+        self.horizontalLayout_5.setSpacing(20)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(-1, -1, 25, -1)
+        self.label_com_port = QLabel(self.frame_com)
+        self.label_com_port.setObjectName(u"label_com_port")
+        font3 = QFont()
+        font3.setFamily(u"Dosis Light")
+        font3.setPointSize(11)
+        font3.setBold(False)
+        font3.setWeight(50)
+        self.label_com_port.setFont(font3)
+        self.label_com_port.setStyleSheet(u"color: white")
+
+        self.horizontalLayout_5.addWidget(self.label_com_port)
+
+        self.combo_com_port = QComboBox(self.frame_com)
+        self.combo_com_port.setObjectName(u"combo_com_port")
+        self.combo_com_port.setMinimumSize(QSize(120, 0))
+
+        self.horizontalLayout_5.addWidget(self.combo_com_port)
+
+
+        self.horizontalLayout_2.addWidget(self.frame_com, 0, Qt.AlignHCenter)
+
+        self.frame_baud = QFrame(self.frame_for_settings)
+        self.frame_baud.setObjectName(u"frame_baud")
+        self.frame_baud.setStyleSheet(u"background-color:none")
+        self.frame_baud.setFrameShape(QFrame.StyledPanel)
+        self.frame_baud.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_baud)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(-1, -1, 25, -1)
+        self.label_com_port_2 = QLabel(self.frame_baud)
+        self.label_com_port_2.setObjectName(u"label_com_port_2")
+        self.label_com_port_2.setFont(font3)
+        self.label_com_port_2.setStyleSheet(u"background-color:none; color: white;")
+
+        self.horizontalLayout_6.addWidget(self.label_com_port_2)
+
+        self.combo_com_port_2 = QComboBox(self.frame_baud)
+        self.combo_com_port_2.setObjectName(u"combo_com_port_2")
+        self.combo_com_port_2.setMinimumSize(QSize(120, 0))
+
+        self.horizontalLayout_6.addWidget(self.combo_com_port_2)
+
+
+        self.horizontalLayout_2.addWidget(self.frame_baud, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_4.addWidget(self.frame_for_settings)
+
 
         self.verticalLayout_3.addWidget(self.group_serial_settings)
 
+        self.button_frame = QFrame(self.content_bar)
+        self.button_frame.setObjectName(u"button_frame")
+        self.button_frame.setMaximumSize(QSize(16777215, 40))
+        self.button_frame.setStyleSheet(u"background:none")
+        self.button_frame.setFrameShape(QFrame.StyledPanel)
+        self.button_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.button_frame)
+        self.horizontalLayout_7.setSpacing(10)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(50, 0, 50, 0)
+        self.dummy_frame_2 = QFrame(self.button_frame)
+        self.dummy_frame_2.setObjectName(u"dummy_frame_2")
+        self.dummy_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.dummy_frame_2.setFrameShadow(QFrame.Raised)
+
+        self.horizontalLayout_7.addWidget(self.dummy_frame_2)
+
+        self.start_stop_button = QPushButton(self.button_frame)
+        self.start_stop_button.setObjectName(u"start_stop_button")
+        self.start_stop_button.setMaximumSize(QSize(200, 16777215))
+        font4 = QFont()
+        font4.setFamily(u"Bahnschrift SemiBold")
+        font4.setPointSize(8)
+        self.start_stop_button.setFont(font4)
+        self.start_stop_button.setStyleSheet(u"border-color: rgb(60, 231, 195);\n"
+"border-style: outset;\n"
+"color:lightgrey;\n"
+"border-width:2px;\n"
+"border-radius: 12px;\n"
+"background-color: rgb(50, 50, 100);\n"
+"padding: 6px;")
+
+        self.horizontalLayout_7.addWidget(self.start_stop_button)
+
+        self.dummy_frame = QFrame(self.button_frame)
+        self.dummy_frame.setObjectName(u"dummy_frame")
+        self.dummy_frame.setFrameShape(QFrame.StyledPanel)
+        self.dummy_frame.setFrameShadow(QFrame.Raised)
+
+        self.horizontalLayout_7.addWidget(self.dummy_frame)
+
+
+        self.verticalLayout_3.addWidget(self.button_frame)
+
         self.group_output = QGroupBox(self.content_bar)
         self.group_output.setObjectName(u"group_output")
-        self.group_output.setFont(font1)
-        self.group_output.setStyleSheet(u"border: 1px solid rgb(85, 150, 127); ; color: rgb(255, 170, 255);border-radius:5px;")
+        self.group_output.setMaximumSize(QSize(16777215, 400))
+        self.group_output.setFont(font2)
+        self.group_output.setStyleSheet(u"border: 1px solid rgb(85, 150, 127); ; color: rgb(255, 170, 255);border-radius:12px;\n"
+"background-color: rgb(30, 30, 30);")
         self.group_output.setAlignment(Qt.AlignRight|Qt.AlignTop|Qt.AlignTrailing)
         self.group_output.setFlat(False)
         self.group_output.setCheckable(False)
+        self.verticalLayout_6 = QVBoxLayout(self.group_output)
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.verticalLayout_6.setContentsMargins(15, 15, 15, 15)
+        self.console_output = QTextBrowser(self.group_output)
+        self.console_output.setObjectName(u"console_output")
+        self.console_output.setStyleSheet(u"border: none;")
+
+        self.verticalLayout_6.addWidget(self.console_output)
+
 
         self.verticalLayout_3.addWidget(self.group_output)
 
@@ -208,9 +325,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setContentsMargins(15, 0, 0, 0)
         self.label_credits = QLabel(self.frame_label_credits)
         self.label_credits.setObjectName(u"label_credits")
-        font2 = QFont()
-        font2.setFamily(u"Roboto Condensed Light")
-        self.label_credits.setFont(font2)
+        font5 = QFont()
+        font5.setFamily(u"Roboto Condensed Light")
+        self.label_credits.setFont(font5)
         self.label_credits.setStyleSheet(u"color: rgb(140, 112, 184);")
 
         self.verticalLayout_2.addWidget(self.label_credits)
@@ -257,9 +374,15 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.btn_close.setText("")
         self.group_serial_settings.setTitle(QCoreApplication.translate("MainWindow", u"  SERIAL SETTINGS  ", None))
-        self.com_port.setText(QCoreApplication.translate("MainWindow", u"Set COM Port", None))
-        self.baud_rate.setText(QCoreApplication.translate("MainWindow", u"Set Baud Rate", None))
+        self.label_com_port.setText(QCoreApplication.translate("MainWindow", u"Set  Com  Port", None))
+        self.label_com_port_2.setText(QCoreApplication.translate("MainWindow", u"Set  Baud  Rate", None))
+        self.start_stop_button.setText(QCoreApplication.translate("MainWindow", u"START LISTENING", None))
         self.group_output.setTitle(QCoreApplication.translate("MainWindow", u"  OUTPUT WINDOW  ", None))
+        self.console_output.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("MainWindow", u"\u00a9 Orbit Technologies", None))
     # retranslateUi
 
