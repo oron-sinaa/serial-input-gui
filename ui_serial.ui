@@ -400,6 +400,9 @@ background-color: none;
                        <height>0</height>
                       </size>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: black;</string>
+                     </property>
                     </widget>
                    </item>
                   </layout>
@@ -424,7 +427,7 @@ background-color: none;
                     <number>25</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="label_com_port_2">
+                    <widget class="QLabel" name="label_baud_rate">
                      <property name="font">
                       <font>
                        <family>Dosis Light</family>
@@ -442,13 +445,58 @@ background-color: none;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="combo_com_port_2">
+                    <widget class="QComboBox" name="combo_baud_rate">
                      <property name="minimumSize">
                       <size>
                        <width>120</width>
                        <height>0</height>
                       </size>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: black;</string>
+                     </property>
+                     <property name="editable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="currentIndex">
+                      <number>-1</number>
+                     </property>
+                     <property name="insertPolicy">
+                      <enum>QComboBox::NoInsert</enum>
+                     </property>
+                     <property name="placeholderText">
+                      <string comment="- select -" extracomment="- select -">- select -</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>4800</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>9600</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>19200</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>38400</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>57600</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>115200</string>
+                      </property>
+                     </item>
                     </widget>
                    </item>
                   </layout>
@@ -478,17 +526,8 @@ background-color: none;
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_7">
-             <property name="spacing">
-              <number>10</number>
-             </property>
-             <property name="leftMargin">
-              <number>50</number>
-             </property>
              <property name="topMargin">
               <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>50</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -504,35 +543,62 @@ background-color: none;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="start_stop_button">
+              <widget class="QFrame" name="frame_button">
                <property name="maximumSize">
                 <size>
-                 <width>200</width>
+                 <width>260</width>
                  <height>16777215</height>
                 </size>
                </property>
-               <property name="font">
-                <font>
-                 <family>Bahnschrift SemiBold</family>
-                 <pointsize>8</pointsize>
-                </font>
+               <property name="autoFillBackground">
+                <bool>false</bool>
                </property>
                <property name="styleSheet">
-                <string notr="true">border-color: rgb(60, 231, 195);
-border-style: outset;
-color:lightgrey;
-border-width:2px;
-border-radius: 12px;
-background-color: rgb(50, 50, 100);
-padding: 6px;</string>
+                <string notr="true">background-color: rgb(255, 255, 255); border-width:1px;</string>
                </property>
-               <property name="text">
-                <string>START LISTENING</string>
+               <property name="frameShape">
+                <enum>QFrame::WinPanel</enum>
                </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="start_stop_button">
+                  <property name="font">
+                   <font>
+                    <family>Bahnschrift SemiBold</family>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton::hover#start_stop_button
+{
+	background-color: rgba(85, 170, 255, 150);
+	border-color: rgb(0, 0, 0);
+	border-radius: 2px;
+	border-width: 2px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>START LISTENING</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>
               <widget class="QFrame" name="dummy_frame">
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -716,8 +782,6 @@ p, li { white-space: pre-wrap; }
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="bg_src.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
