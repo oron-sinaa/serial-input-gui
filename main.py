@@ -1,13 +1,6 @@
-################################################################################
-##
-# BY: WANDERSON M.PIMENTA
-# PROJECT MADE WITH: Qt Designer and PySide2
-# V: 1.0.0
-##
-################################################################################
-
 import sys
 import platform
+import serial.tools.list_ports
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime,
                             QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)

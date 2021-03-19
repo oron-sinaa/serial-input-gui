@@ -74,7 +74,6 @@ class UIFunctions(MainWindow):
             "QSizeGrip { width: 10px; height: 10px; margin: 5px } QSizeGrip:hover { background-color: rgb(50, 42, 94) }")
         self.sizegrip.setToolTip("Resize Window")
 
-    # RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
-
+    # RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTORED
     def returnStatus():
         return GLOBAL_STATE
